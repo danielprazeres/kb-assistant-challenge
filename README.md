@@ -24,7 +24,7 @@ You may use a Retrieval-Augmented Generation (RAG) approach, or any alternative 
 
 ```bash
 # Clone the repository
-git clone <repository-url>
+git clone https://github.com/danielprazeres/kb-assistant-challenge.git
 cd kb-assistant-challenge
 
 # Copy environment file
@@ -174,8 +174,8 @@ QDRANT_COLLECTION_NAME=matrix_script
 
 # Application Settings
 LOG_LEVEL=INFO
-TOP_K_RESULTS=5
-SIMILARITY_THRESHOLD=0.7
+TOP_K_RESULTS=300
+SIMILARITY_THRESHOLD=0.1
 ```
 
 ## Development
@@ -376,10 +376,3 @@ You can install additional Python libraries by adding them to the **requirements
 ### Environment Variables
 
 You can define environment variables (such as `OPENAI_API_KEY`) in a `.env` file placed at the root of the project. These variables will be automatically loaded into the environment inside the Dev Container.
-
-**Example `.env` file:**
-
-```env
-OPENAI_API_KEY=your-key-here
-MY_CUSTOM_VAR=some-value
-```
