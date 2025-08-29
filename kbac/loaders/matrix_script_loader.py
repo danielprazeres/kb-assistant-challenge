@@ -69,9 +69,7 @@ class MatrixScriptLoader:
         if not line_text.isupper():
             return None, None
 
-        match_ = regex.match(
-            r"([AB]?\d+\s{2,})(.*?)(\s{2,}[AB]?\d+$)", line_text
-        )
+        match_ = regex.match(r"([AB]?\d+\s{2,})(.*?)(\s{2,}[AB]?\d+$)", line_text)
 
         if match_ is None:
             return None, None
@@ -152,9 +150,7 @@ class MatrixScriptLoader:
         if any(it in line_text for it in self.ignoread_tags):
             return
 
-        location_text, location_margin = self._get_location_text(
-            line_text=line_text
-        )
+        location_text, location_margin = self._get_location_text(line_text=line_text)
 
         if location_text is not None and location_margin is not None:
             return LineItem(
@@ -164,9 +160,7 @@ class MatrixScriptLoader:
                 margin=location_margin,
             )
 
-        character_text, character_margin = self._get_character_text(
-            line_text=line_text
-        )
+        character_text, character_margin = self._get_character_text(line_text=line_text)
 
         if character_text is not None and character_margin is not None:
             return LineItem(

@@ -11,3 +11,13 @@ more-itertools==10.7.0
 pydantic-ai==0.5.0
 langchain-qdrant==0.2.0
 langchain-openai==0.3.28
+qdrant-client>=1.10.1,<2.0.0
+
+# Web interface
+streamlit==1.29.0
+
+# API backend
+fastapi>=0.115.0
+uvicorn[standard]==0.24.0
+pydantic>=2.7.4,<3.0.0
+pydantic-settings>=2.5.2
